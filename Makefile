@@ -28,4 +28,4 @@ Time.o: Time.cc Time.h defs.h
 	g++ $(OPT) -c Time.cc
 
 clean:
-	del -f *.o a2.exe
+	rm -f *.o a2

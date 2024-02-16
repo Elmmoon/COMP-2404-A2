@@ -8,7 +8,7 @@ using namespace std;
 #include "defs.h"
 
 Control::Control(){
-  school = new School("Carleton University");
+  school = new School("Carleton U. School of Computer Science");
   numScheds = 0;
 }
 

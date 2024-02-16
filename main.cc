@@ -1,4 +1,6 @@
 /* 
+Author: Dylan Yin
+ID: 101257186
 Purpose: A schedule manager for Carleton University's Fall 2023 and Winter 2024
          semesters. View 'Usage' for a list of instructions and functionalities.
 Usage:
@@ -14,8 +16,7 @@ Usage:
     Enter 1 to switch between term schedules
     Enter 5 to clear the current schedule
     Enter 0 to exit
-Author: Dylan Yin
-ID: 101257186
+
 */
 
 #include "Control.h"

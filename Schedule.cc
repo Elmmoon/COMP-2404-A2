@@ -7,7 +7,6 @@ using namespace std;
 #include "Schedule.h"
 #include "Time.h"
 #include "defs.h"
-#include "View.h"
 
 Schedule::Schedule(string t){
     term = t;
@@ -16,23 +15,22 @@ Schedule::Schedule(string t){
 
 
 bool Schedule::addCourse(Course* course){
-    View view;
     if (course == NULL){
-        view.printStr("ERROR:  Course not found\n");
+        cout << "ERROR:  Course not found"<< endl;
         return false;
     }
     if (course->getTerm() != term){
-        view.printStr("ERROR:  This course does not match the term selected\n");
+        cout << "ERROR:  This course does not match the term selected" << endl;
         return false;
     }
     WeekDayType day1, day2;
     TimeSlotType time;
     if (!course->computeDays(day1, day2)){
-        view.printStr("ERROR:  Invalid date\n");
+        cout << "ERROR:  Invalid date" << endl;
         return false;
     }
     if (!course->computeSlot(time)){
-        view.printStr("ERROR:  Invalid time\n");
+        cout << "ERROR:  Invalid time" << endl;
         return false;
     }
     schedule[time][day1] = course;
