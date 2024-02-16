@@ -1,3 +1,7 @@
+/*
+Purpose: A representation of a school where the courses take place in.
+*/
+
 #ifndef SCHOOL_H
 #define SCHOOL_H
 

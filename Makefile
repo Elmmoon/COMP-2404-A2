@@ -12,10 +12,10 @@ Control.o: Control.cc Control.h School.h View.h defs.h
 Course.o: Course.cc Course.h Time.h
 	g++ $(OPT) -c Course.cc
 
-CourseArray.o: CourseArray.cc CourseArray.h Course.h defs.h 
+CourseArray.o: CourseArray.cc CourseArray.h Course.h defs.h
 	g++ $(OPT) -c CourseArray.cc
 
-Schedule.o: Schedule.cc Schedule.h defs.h Course.h
+Schedule.o: Schedule.cc Schedule.h defs.h Course.h Time.h
 	g++ $(OPT) -c Schedule.cc
 
 School.o: School.cc School.h CourseArray.h Course.h
@@ -28,4 +28,4 @@ Time.o: Time.cc Time.h defs.h
 	g++ $(OPT) -c Time.cc
 
 clean:
-	del -f *.o a2
+	del -f *.o a2.exe

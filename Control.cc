@@ -13,25 +13,27 @@ Control::Control(){
 }
 
 Control::~Control(){
-
+  for (int i = 0; i < numScheds; i++)
+    delete schedules[i];
+  delete school;
 }
 
 void Control::launch(){
   View view;
-  string term;
+  string term = "NONE SELECTED";
   int id,choice;
-  Schedule* curSched;
+  Schedule* curSched = NULL;
   Course* course;
   bool loop = true;
 
   initCourses(school);
   while (loop){
     view.showMenu(choice);
+    cout << endl;
     switch(choice){
       case 1:
         cout << "Please enter new term: ";
         view.readStr(term);
-        cout << "TERM: " << term << endl;
         if (!findSched(term, &curSched)){
           curSched = new Schedule(term);
           addSched(curSched);
@@ -39,6 +41,7 @@ void Control::launch(){
       break;
 
       case 2:
+
         school->printCourses(term);
       break;
 
@@ -52,11 +55,15 @@ void Control::launch(){
       case 4:
         if (curSched == NULL)
           cout << "ERROR:  No term selected" << endl;
-        view.readInt(id);
-        if (school->findCourse(id, &course))
-          curSched->addCourse(course);
-        else
-          cout << "ERROR:  Course not found" << endl;
+        else{
+          cout << "Please enter course id: ";
+          view.readInt(id);
+          if (school->findCourse(id, &course))
+            curSched->addCourse(course);
+          else
+            cout << "ERROR:  Course not found" << endl;
+        }
+        
       break;
 
       case 5:
@@ -65,10 +72,8 @@ void Control::launch(){
         else 
           curSched->clear();
       break;
-
       case 0:
         loop = false;
-      break;
     }
   }
 }
@@ -83,7 +88,7 @@ bool Control::addSched(Schedule* sched){
 bool Control::findSched(string term, Schedule** sched){
   for (int i = 0; i < numScheds; i++){
     if (schedules[i]->getTerm() == term){
-      sched = &schedules[i];
+      *sched = schedules[i];
       return true;
     }   
   }

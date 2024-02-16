@@ -1,3 +1,7 @@
+/*
+Purpose: A representation of the available courses that may be added to a schedule.
+*/
+
 #ifndef COURSE_H
 #define COURSE_H
 

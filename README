@@ -1,0 +1,19 @@
+Author: Dylan Yin
+Student ID: 101257186
+
+Purpose: A schedule manager for Carleton University's Fall 2023 and Winter 2024 semesters. View 'Usage' in 'main.cc' for a list of instructions and functionalities.
+
+Files: main.cc Control.h Course.h CourseArray.h defs.h Schedule.h School.h Time.h View.h Control.cc Course.cc 
+        CourseArray.cc Schedule.cc School.cc Time.cc View.cc Makefile 
+
+Instructions: 
+Run in a linux environment. Enter the directory with the necessary files. 
+
+Enter "make" into the terminal.
+
+Enter "./a2" next. This will launch the schedule manager.
+
+Enter 1 to select a term
+        Only 'F23' and 'W24' are available
+
+Enter options given by the menu to navigate the schedule manager.

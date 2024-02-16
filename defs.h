@@ -1,3 +1,8 @@
+/*
+Purpose: Contains enumerators that represent dates and timeslots as well as
+         various preprocessor definitions 
+*/
+
 #ifndef DEFS_H
 #define DEFS_H
 

@@ -86,9 +86,24 @@ int Course::getId(){
 }
 
 void Course::print(){
+    string day;
+    switch (days){
+        case MON_WED:
+            day = "MW";
+            break;
+        case TUE_THU:
+            day = "TR";
+            break;
+        case WED_FRI:
+            day = "WF";
+            break;
+        default:
+            break;
+    }
+
     cout << left << setfill(' ') << setw(5) << id << " Term: " << setw(5) << term <<
      " " << setw(4) << subject << " " << setw(4) << code << " " << setw(2) << section <<  
-     " " << days << " ";
+     " " << day << " ";
     time->print();
     cout << "   Instr: " << left << instructor << endl; 
 }

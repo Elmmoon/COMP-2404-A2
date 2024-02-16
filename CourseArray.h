@@ -1,3 +1,8 @@
+/*
+Purpose: A collections class that contains a statically-allocated
+         array of Course object pointers.
+*/
+
 #ifndef COURSEARRAY_H
 #define COURSEARRAY_H
 
@@ -7,6 +12,7 @@
 class CourseArray{
   public:
     CourseArray();
+    ~CourseArray();
     void add(Course*);
     bool find(int, Course**);
     void print(string);

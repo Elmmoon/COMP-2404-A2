@@ -1,3 +1,7 @@
+/*
+Purpose: A boundary class that interacts with the end-user
+*/
+
 #ifndef VIEW_H
 #define VIEW_H
 

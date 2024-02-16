@@ -1,3 +1,8 @@
+/*
+Purpose: A representation of 24 hour time
+*/
+
+
 #ifndef TIME_H
 #define TIME_H
 
