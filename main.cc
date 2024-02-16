@@ -16,7 +16,6 @@ Usage:
     Enter 1 to switch between term schedules
     Enter 5 to clear the current schedule
     Enter 0 to exit
-
 */
 
 #include "Control.h"

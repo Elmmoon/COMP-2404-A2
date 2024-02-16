@@ -41,7 +41,6 @@ void Control::launch(){
       break;
 
       case 2:
-
         school->printCourses(term);
       break;
 
@@ -63,7 +62,6 @@ void Control::launch(){
           else
             cout << "ERROR:  Course not found" << endl;
         }
-        
       break;
 
       case 5:

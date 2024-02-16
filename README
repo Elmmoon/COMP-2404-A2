@@ -3,7 +3,7 @@ Student ID: 101257186
 
 Purpose: A schedule manager for Carleton University's Fall 2023 and Winter 2024 semesters. View 'Usage' in 'main.cc' for a list of instructions and functionalities.
 
-Files: main.cc Control.h Course.h CourseArray.h defs.h Schedule.h School.h Time.h View.h Control.cc Course.cc 
+Files:  main.cc Control.h Course.h CourseArray.h defs.h Schedule.h School.h Time.h View.h Control.cc Course.cc 
         CourseArray.cc Schedule.cc School.cc Time.cc View.cc Makefile 
 
 Instructions: 
